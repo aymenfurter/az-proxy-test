@@ -1,6 +1,4 @@
 # AZ Proxy Test
-
-# Code
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
