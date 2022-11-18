@@ -2,11 +2,14 @@
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
+az storage account list
 docker run --name=hitch -p 443:443 hitch
-HTTP_PROXY=http://127.0.0.1:443
-HTTPS_PROXY=http://127.0.0.1:443
-az account list
+export HTTP_PROXY=http://127.0.0.1:443
+export HTTPS_PROXY=http://127.0.0.1:443
+az storage account list
 NO_PROXY=*
 no_proxy=*
-az account list
+#export NO_PROXY=*.login.microsoftonline.com,*.aadcdn.msftauth.net,*.logincdn.msftauth.net,*.login.live.com,*.msauth.net,*.aadcdn.microsoftonline-p.com,*.microsoftonline-p.com,*.portal.azure.com,*.hosting.portal.azure.net,*.reactblade.portal.azure.net,*.management.azure.com,*.ext.azure.com,*.graph.windows.net,*.graph.microsoft.com,*.account.microsoft.com,*.bmx.azure.com,*.subscriptionrp.trafficmanager.net,*.signup.azure.com,,aka.ms,*.asazure.windows.net,*.azconfig.io,*.aad.azure.com,*.aadconnecthealth.azure.com,ad.azure.com,adf.azure.com,api.aadrm.com,api.loganalytics.io,*.applicationinsights.azure.com,appservice.azure.com,*.arc.azure.net,asazure.windows.net,bastion.azure.com,batch.azure.com,catalogapi.azure.com,changeanalysis.azure.com,cognitiveservices.azure.com,config.office.com,cosmos.azure.com,*.database.windows.net,datalake.azure.net,dev.azure.com,dev.azuresynapse.net,digitaltwins.azure.net,learn.microsoft.com,elm.iga.azure.com,eventhubs.azure.net,functions.azure.com,gallery.azure.com,go.microsoft.com,help.kusto.windows.net,identitygovernance.azure.com,iga.azure.com,informationprotection.azure.com,kusto.windows.net,learn.microsoft.com,logic.azure.com,marketplacedataprovider.azure.com,marketplaceemail.azure.com,media.azure.net,monitor.azure.com,mspim.azure.com,network.azure.com,purview.azure.com,quantum.azure.com,rest.media.azure.net,search.azure.com,servicebus.azure.net,servicebus.windows.net,shell.azure.com,sphere.azure.net,azure.status.microsoft,storage.azure.com,storage.azure.net,vault.azure.net
+#export no_proxy=*.login.microsoftonline.com,*.aadcdn.msftauth.net,*.logincdn.msftauth.net,*.login.live.com,*.msauth.net,*.aadcdn.microsoftonline-p.com,*.microsoftonline-p.com,*.portal.azure.com,*.hosting.portal.azure.net,*.reactblade.portal.azure.net,*.management.azure.com,*.ext.azure.com,*.graph.windows.net,*.graph.microsoft.com,*.account.microsoft.com,*.bmx.azure.com,*.subscriptionrp.trafficmanager.net,*.signup.azure.com,,aka.ms,*.asazure.windows.net,*.azconfig.io,*.aad.azure.com,*.aadconnecthealth.azure.com,ad.azure.com,adf.azure.com,api.aadrm.com,api.loganalytics.io,*.applicationinsights.azure.com,appservice.azure.com,*.arc.azure.net,asazure.windows.net,bastion.azure.com,batch.azure.com,catalogapi.azure.com,changeanalysis.azure.com,cognitiveservices.azure.com,config.office.com,cosmos.azure.com,*.database.windows.net,datalake.azure.net,dev.azure.com,dev.azuresynapse.net,digitaltwins.azure.net,learn.microsoft.com,elm.iga.azure.com,eventhubs.azure.net,functions.azure.com,gallery.azure.com,go.microsoft.com,help.kusto.windows.net,identitygovernance.azure.com,iga.azure.com,informationprotection.azure.com,kusto.windows.net,learn.microsoft.com,logic.azure.com,marketplacedataprovider.azure.com,marketplaceemail.azure.com,media.azure.net,monitor.azure.com,mspim.azure.com,network.azure.com,purview.azure.com,quantum.azure.com,rest.media.azure.net,search.azure.com,servicebus.azure.net,servicebus.windows.net,shell.azure.com,sphere.azure.net,azure.status.microsoft,storage.azure.com,storage.azure.net,vault.azure.net
+az storage account list
 ```
